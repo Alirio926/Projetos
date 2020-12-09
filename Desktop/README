@@ -1,5 +1,5 @@
 # Projetos
- Esse Git contem alguns dos projetos que fiz.
+ Esse Git contém alguns dos projetos que fiz.
  
  #Desktop/Estoque
  Programa Desktop para controle de Cilindros de passagem do Moinho.
@@ -11,7 +11,7 @@
  para contagem da produção.
  
  #Desktop/GMA
- Programa Desktop para controle de produção e expedição de todos os tipos de farinha e farelo produzido na planta da moinho.
+ Programa Desktop para controle de produção e expedição de todos os tipos de farinha e farelo produzido na planta na moinho. Todo o processo era feito com pedido escrito.
  Geração de relatórios em Jasper.
  Servidor com Banco Derby    - Roda servidor Java RMI para comunicação dos processos via rede local
  Interface Grafica Expedição - Faz pedido de fabricação do produto a Moagem 
