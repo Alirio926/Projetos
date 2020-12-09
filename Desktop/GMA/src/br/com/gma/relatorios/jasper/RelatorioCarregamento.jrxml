@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0c47c9fd-b5d3-4972-aef0-cc4bdf9e1fe3">
+	<property name="ireport.zoom" value="1.7715610000000022"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" isBlankWhenNull="true" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="94f73907-d74d-4ba5-8450-7d911ec0585a"/>
+	<field name="produto" class="java.lang.String"/>
+	<field name="quant" class="java.lang.Float"/>
+	<field name="placa" class="java.lang.String"/>
+	<field name="carga" class="java.lang.Integer"/>
+	<field name="inicio" class="java.util.Date"/>
+	<field name="fim" class="java.util.Date"/>
+	<field name="avaria" class="java.lang.Integer"/>
+	<field name="duracao" class="java.lang.String"/>
+	<field name="expedido" class="java.lang.Float"/>
+	<field name="estoque" class="java.lang.Float"/>
+	<field name="cliente" class="java.lang.String"/>
+	<field name="media" class="java.lang.Float"/>
+	<variable name="quant_1" class="java.lang.Float" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{quant}]]></variableExpression>
+	</variable>
+	<variable name="avaria_1" class="java.lang.Integer" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{avaria}]]></variableExpression>
+	</variable>
+	<variable name="duracao_1" class="java.lang.Integer" resetType="Page" calculation="Count">
+		<variableExpression><![CDATA[$F{duracao}]]></variableExpression>
+	</variable>
+	<variable name="quant_2" class="java.lang.Float" calculation="Sum">
+		<variableExpression><![CDATA[$F{quant}]]></variableExpression>
+	</variable>
+	<variable name="avaria_2" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{avaria}]]></variableExpression>
+	</variable>
+	<variable name="expedido_1" class="java.lang.Float" calculation="Sum">
+		<variableExpression><![CDATA[$F{expedido}]]></variableExpression>
+	</variable>
+	<variable name="expedido_2" class="java.lang.Float" calculation="Sum">
+		<variableExpression><![CDATA[$F{expedido}]]></variableExpression>
+	</variable>
+	<variable name="estoque_1" class="java.lang.Float" calculation="Sum">
+		<variableExpression><![CDATA[$F{estoque}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="51" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="800" height="51" forecolor="#006699" backcolor="#006699" uuid="8c07dfbf-99d9-4540-b132-0e7b218fe792"/>
+				<staticText>
+					<reportElement style="Title" mode="Transparent" x="0" y="0" width="800" height="51" uuid="613cdeb3-9dd0-4239-8697-48b8842fd8d8"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="30" isBold="false"/>
+					</textElement>
+					<text><![CDATA[REGISTRO DE CARREGAMENTO DIARIO]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="294" y="1" width="58" height="19" uuid="510d2f1b-c2f9-4a66-9ac1-62c0e43a3645"/>
+				<text><![CDATA[Placa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="630" y="1" width="53" height="19" uuid="c27b33ed-978a-49bf-92b3-0ec421316e68"/>
+				<text><![CDATA[Avaria]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="20" width="802" height="1" uuid="8f3d29c4-e768-40ef-bf82-f7bdeb307978"/>
+			</line>
+			<staticText>
+				<reportElement x="175" y="1" width="45" height="20" uuid="97b9b68d-bcf5-4675-a6da-e832e80c8250"/>
+				<text><![CDATA[Expedido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="234" y="1" width="49" height="20" uuid="6c8df684-258b-4ebb-9514-29dd8c167d7e"/>
+				<text><![CDATA[Estoque]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="1" width="57" height="20" uuid="b0bc5587-ec87-4ec6-a534-d95facb3036e"/>
+				<text><![CDATA[Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="104" y="1" width="60" height="21" uuid="6b1f127d-e6f8-4a53-b535-7d54029f295a"/>
+				<text><![CDATA[Produto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="352" y="1" width="40" height="21" uuid="d2d6685a-1151-4a4c-baf0-62e488371b15"/>
+				<text><![CDATA[Data]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="402" y="1" width="41" height="20" uuid="d0e22d83-d72e-4b81-a06a-b6fab7c2eff2"/>
+				<text><![CDATA[Inicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="458" y="1" width="41" height="20" uuid="db0c2b37-747c-497a-9b03-a7a97d9c40c2"/>
+				<text><![CDATA[Fim]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="570" y="1" width="47" height="19" uuid="4774858c-1b42-4b4c-bab3-929aa342a977"/>
+				<text><![CDATA[Carga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="511" y="1" width="42" height="19" uuid="ca9eb5f3-4492-43b1-bf89-65cd27ee9ce0"/>
+				<text><![CDATA[Duracao]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="706" y="1" width="52" height="20" uuid="7dda877a-0d82-4457-88fb-ed21599cb481"/>
+				<text><![CDATA[Média]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="20" uuid="c0d3b11c-1a66-4957-9f24-0cde9665c7a3"/>
+				<textField>
+					<reportElement x="630" y="0" width="53" height="20" uuid="3977391d-f4a4-4424-b029-5a256e1aa047"/>
+					<textFieldExpression><![CDATA[$F{avaria}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="294" y="0" width="58" height="20" uuid="e154fe23-efcd-494f-9bfd-4b1d6acb7b61"/>
+					<textFieldExpression><![CDATA[$F{placa}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="175" y="0" width="45" height="20" uuid="27277f82-29ab-4243-82f5-099a0c88fb8c"/>
+					<textFieldExpression><![CDATA[$F{expedido}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="234" y="0" width="47" height="20" uuid="48f32aaf-b4b9-4983-bc63-8af10174b70d"/>
+					<textFieldExpression><![CDATA[$F{estoque}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="12" y="0" width="68" height="20" uuid="c4294554-daac-4401-8453-58f96c8022b0"/>
+					<textFieldExpression><![CDATA[$F{cliente}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="104" y="0" width="60" height="20" uuid="7c0df1e6-7c4c-4f66-aa13-cb5d2dadf311"/>
+					<textFieldExpression><![CDATA[$F{produto}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd-MMM">
+					<reportElement x="352" y="0" width="40" height="20" uuid="df5b3a36-83b2-491b-9571-88d3a561883d"/>
+					<textFieldExpression><![CDATA[$F{inicio}]]></textFieldExpression>
+				</textField>
+				<textField pattern="HH.mm">
+					<reportElement x="402" y="0" width="41" height="20" uuid="96219c3a-d499-4c0e-9a31-7515d31355de"/>
+					<textFieldExpression><![CDATA[$F{inicio}]]></textFieldExpression>
+				</textField>
+				<textField pattern="HH.mm">
+					<reportElement x="458" y="0" width="41" height="20" uuid="f98b96f7-2bb8-4a79-9fd9-9db44ba74d40"/>
+					<textFieldExpression><![CDATA[$F{fim}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="570" y="0" width="47" height="20" uuid="bcce65f9-f019-4d43-ae1c-01411f7e33dc"/>
+					<textFieldExpression><![CDATA[$F{carga}]]></textFieldExpression>
+				</textField>
+				<textField pattern="HH.mm">
+					<reportElement x="511" y="0" width="42" height="20" uuid="32615c3a-78a6-47d2-bc3f-eaf509684096"/>
+					<textFieldExpression><![CDATA[$F{duracao}]]></textFieldExpression>
+				</textField>
+				<textField pattern="###0">
+					<reportElement x="706" y="0" width="52" height="20" uuid="77fcf682-e704-485d-b43e-6ee105fdb7fa"/>
+					<textFieldExpression><![CDATA[$F{media}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement x="0" y="20" width="802" height="1" uuid="8b245920-7d37-4a34-8214-595740954dbd"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="3" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="24" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="802" height="24" forecolor="#006699" backcolor="#F2EBDF" uuid="ff21c947-951b-4066-9e96-ef8003a15aef"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="747" y="1" width="40" height="20" forecolor="#736343" uuid="689dfbf0-5a7c-4529-a031-6de829b58e25"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="667" y="1" width="80" height="20" forecolor="#736343" uuid="573eb965-4c43-4904-ba2f-b2b21c6c644f"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="12" y="0" width="197" height="20" forecolor="#736343" uuid="38d64d35-efd0-4f92-99fa-52e849060f92"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="175" y="1" width="45" height="20" uuid="fe847d36-6251-434d-b74e-374e5e989d51"/>
+				<textFieldExpression><![CDATA[$V{expedido_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="234" y="1" width="43" height="20" uuid="a58be060-fd1d-47fa-b0c4-cc458c42beaa"/>
+				<textFieldExpression><![CDATA[$V{estoque_1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

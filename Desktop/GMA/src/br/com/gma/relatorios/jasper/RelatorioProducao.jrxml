@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="62ad9bcb-6c27-44a7-9772-756978f4e252">
+	<property name="ireport.zoom" value="1.771561000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" isBlankWhenNull="true" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<field name="carregamentotipo" class="java.lang.String"/>
+	<field name="cargaopen" class="java.lang.Integer"/>
+	<field name="cargaclose" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="51" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="51" forecolor="#006699" backcolor="#006699" uuid="d94f8477-d81c-4ea0-a039-d2c7942ce551"/>
+				<staticText>
+					<reportElement style="Title" mode="Transparent" x="0" y="0" width="555" height="51" uuid="1b609411-fb20-49d8-ab27-10cd305d61ab"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="30" isBold="false"/>
+					</textElement>
+					<text><![CDATA[REGISTRO DE PRODUÇÃO]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="185" height="20" uuid="10c86cfc-297b-4e88-b2d1-69daf059df4e"/>
+				<text><![CDATA[Tipo Carregamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="0" width="185" height="20" uuid="334fba00-b192-4cf2-aa22-506fcafbd4db"/>
+				<text><![CDATA[Carga aberta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="0" width="185" height="20" uuid="99c22bd6-7b6d-4bb3-8d25-9069e3479332"/>
+				<text><![CDATA[Carga fechada]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="20" width="555" height="1" uuid="5cefac8d-92f9-4ec5-bb75-e3712abc3c9b"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="555" height="20" uuid="4f20d7ee-0e69-49e8-9ba5-9c180a20f4e7"/>
+				<textField>
+					<reportElement x="0" y="0" width="185" height="20" uuid="8d3efbda-e029-4aad-81e7-36922ceb1a05"/>
+					<textFieldExpression><![CDATA[$F{carregamentotipo}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="185" y="0" width="185" height="20" uuid="00caf86a-4d89-4979-a2e9-c5a83872a0d1"/>
+					<textFieldExpression><![CDATA[$F{cargaopen}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="370" y="0" width="185" height="20" uuid="805071e8-1cba-47fc-9d23-ce35df7b4079"/>
+					<textFieldExpression><![CDATA[$F{cargaclose}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement x="0" y="20" width="555" height="1" uuid="69e6f479-9343-426f-bd69-0362f30262be"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="5" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="24" forecolor="#006699" backcolor="#F2EBDF" uuid="8d06b623-516d-4730-a8a5-d2bf4f94d9e4"/>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="10" y="0" width="197" height="20" forecolor="#736343" uuid="e097eb9b-8663-4389-9036-42e4178502c7"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="509" y="0" width="40" height="20" forecolor="#736343" uuid="b18fe61c-dddf-4ea9-884f-60b2a6e9b331"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Column header" x="425" y="0" width="84" height="20" forecolor="#736343" uuid="447da1a0-462b-4148-a05e-629c8fa7e648"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="9" splitType="Stretch"/>
+	</summary>
+</jasperReport>

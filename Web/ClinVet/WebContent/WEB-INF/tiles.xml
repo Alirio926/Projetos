@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+	"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="layout.tiles" template="/WEB-INF/views/layout/baseLayout.jsp">
+		<put-attribute name="title" value=""></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/layout/header.jsp"></put-attribute>
+		<put-attribute name="body" value=""></put-attribute>
+		<put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp"></put-attribute>
+	</definition>	
+	<!-- ** Home ** -->
+	<definition name="home.login.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="TreinaWeb Spring MVC: Login"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/home/login.jsp"></put-attribute>
+	</definition>
+	<definition name="home.bemvindo.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="TreinaWeb Spring MVC: Bem-vindo"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/home/bemVindo.jsp"></put-attribute>
+	</definition>
+	<!-- ** Admin ** -->
+	<definition name="home.addAdmin.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="Clínica Veterinária: Cadastro de administrador"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/home/admin.jsp"></put-attribute>
+	</definition>
+	
+	<!-- ** Veterinario ** -->
+	<definition name="veterinario.listar.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="Clínica Veterinária: Listar"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/veterinario/listar.jsp"></put-attribute>
+	</definition>
+	<definition name="veterinario.adicionar.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="Clínica Veterinária: Adicionar"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/veterinario/adicionar.jsp"></put-attribute>
+	</definition>
+	
+	<!-- ** Animal ** -->
+	<definition name="animal.listar.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="Clínica Veterinária: Listar animal"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/animal/listar.jsp"></put-attribute>
+	</definition>
+	<definition name="animal.adicionar.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="Clínica Veterinária: Adicionar animal"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/animal/adicionar.jsp"></put-attribute>
+	</definition>
+	<definition name="animal.alterar.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="Clínica Veterinária: Alterar animal"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/animal/alterar.jsp"></put-attribute>
+	</definition>
+	<!-- ** Prontuario ** -->
+	<definition name="atendimento.listar.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="Clínica Veterinária: Listar prontuarios"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/atendimento/listar.jsp"></put-attribute>
+	</definition>
+	<definition name="atendimento.adicionar.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="Clínica Veterinária: Adicionar prontuario"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/atendimento/adicionar.jsp"></put-attribute>
+	</definition>
+	<definition name="atendimento.alterar.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="Clínica Veterinária: Alterar prontuario"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/atendimento/alterar.jsp"></put-attribute>
+	</definition>
+</tiles-definitions>

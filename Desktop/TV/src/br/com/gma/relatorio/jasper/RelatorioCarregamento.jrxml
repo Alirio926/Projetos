@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0c47c9fd-b5d3-4972-aef0-cc4bdf9e1fe3">
+	<property name="ireport.zoom" value="1.4641000000000017"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" isBlankWhenNull="true" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="94f73907-d74d-4ba5-8450-7d911ec0585a"/>
+	<variable name="quant_1" class="java.lang.Float" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{quant}]]></variableExpression>
+	</variable>
+	<variable name="avaria_1" class="java.lang.Integer" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{avaria}]]></variableExpression>
+	</variable>
+	<variable name="duracao_1" class="java.lang.Integer" resetType="Page" calculation="Count">
+		<variableExpression><![CDATA[$F{duracao}]]></variableExpression>
+	</variable>
+	<variable name="quant_2" class="java.lang.Float" calculation="Sum">
+		<variableExpression><![CDATA[$F{quant}]]></variableExpression>
+	</variable>
+	<variable name="avaria_2" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{avaria}]]></variableExpression>
+	</variable>
+	<variable name="expedido_1" class="java.lang.Float" calculation="Sum">
+		<variableExpression><![CDATA[$F{expedido}]]></variableExpression>
+	</variable>
+	<variable name="expedido_2" class="java.lang.Float" calculation="Sum">
+		<variableExpression><![CDATA[$F{expedido}]]></variableExpression>
+	</variable>
+	<variable name="estoque_1" class="java.lang.Float" calculation="Sum">
+		<variableExpression><![CDATA[$F{estoque}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="51" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="800" height="51" forecolor="#006699" backcolor="#006699" uuid="8c07dfbf-99d9-4540-b132-0e7b218fe792"/>
+				<staticText>
+					<reportElement style="Title" mode="Transparent" x="0" y="0" width="800" height="51" uuid="613cdeb3-9dd0-4239-8697-48b8842fd8d8"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="30" isBold="false"/>
+					</textElement>
+					<text><![CDATA[REGISTRO DE CARREGAMENTO DIARIO]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="20" width="802" height="1" uuid="8f3d29c4-e768-40ef-bf82-f7bdeb307978"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="20" uuid="c0d3b11c-1a66-4957-9f24-0cde9665c7a3"/>
+			</frame>
+			<line>
+				<reportElement x="0" y="20" width="802" height="1" uuid="8b245920-7d37-4a34-8214-595740954dbd"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="3" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="24" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="802" height="24" forecolor="#006699" backcolor="#F2EBDF" uuid="ff21c947-951b-4066-9e96-ef8003a15aef"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="747" y="1" width="40" height="20" forecolor="#736343" uuid="689dfbf0-5a7c-4529-a031-6de829b58e25"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="667" y="1" width="80" height="20" forecolor="#736343" uuid="573eb965-4c43-4904-ba2f-b2b21c6c644f"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="12" y="0" width="197" height="20" forecolor="#736343" uuid="38d64d35-efd0-4f92-99fa-52e849060f92"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="21" splitType="Stretch"/>
+	</summary>
+</jasperReport>

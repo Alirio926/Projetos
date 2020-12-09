@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Remessa_subreport" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="b3102d98-9c79-4fe9-9dcc-f2c4c3e3b04d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="passagem" class="java.lang.String">
+		<fieldDescription><![CDATA[passagem]]></fieldDescription>
+	</field>
+	<field name="raiacao" class="java.lang.String">
+		<fieldDescription><![CDATA[raiacao]]></fieldDescription>
+	</field>
+	<field name="serial" class="java.lang.String">
+		<fieldDescription><![CDATA[serial]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="185" height="20" uuid="fbe08eaa-186c-4ace-b990-114e75724d0b"/>
+				<text><![CDATA[passagem]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="0" width="185" height="20" uuid="9f2dd99b-136b-4bf2-aee6-89871b61dfd7"/>
+				<text><![CDATA[raiacao]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="0" width="185" height="20" uuid="0b013990-7e93-4845-a898-6689fa7fc516"/>
+				<text><![CDATA[serial]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="185" height="20" uuid="faa8d3fb-eba2-41f4-90fe-2d2462be1382"/>
+				<textFieldExpression><![CDATA[$F{passagem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="0" width="185" height="20" uuid="e44f883a-d41d-43d9-98e1-7f83b75390ea"/>
+				<textFieldExpression><![CDATA[$F{raiacao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="185" height="20" uuid="1ec0644a-b011-40e9-8c55-e2f268c028eb"/>
+				<textFieldExpression><![CDATA[$F{serial}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="66998f68-98d8-43d9-93fc-53cefc94ac16">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="br.com.estoque.entity.RemessaEntity"/>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="tbl_Rolos" uuid="3718e0c2-7c67-473b-abb6-4c01ddc25be2"/>
+	<parameter name="parameter1" class="java.util.Collection"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\Alirio\\Documents\\NetBeansProjects\\Estoque\\src\\br\\com\\estoque\\jasper\\relatorios\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="localizacaoSubReport" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="dataRemessa" class="java.util.Date">
+		<fieldDescription><![CDATA[dataRemessa]]></fieldDescription>
+	</field>
+	<field name="notafiscal" class="java.lang.String">
+		<fieldDescription><![CDATA[notafiscal]]></fieldDescription>
+	</field>
+	<field name="passagem" class="java.lang.String">
+		<fieldDescription><![CDATA[passagem]]></fieldDescription>
+	</field>
+	<field name="remessa" class="java.lang.String">
+		<fieldDescription><![CDATA[remessa]]></fieldDescription>
+	</field>
+	<field name="rolos_pendentes" class="java.lang.Integer">
+		<fieldDescription><![CDATA[rolos_pendentes]]></fieldDescription>
+	</field>
+	<field name="serial" class="java.lang.String">
+		<fieldDescription><![CDATA[serial]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="415" y="2" width="100" height="20" uuid="8bf7c760-75f1-4930-8a12-a20ebeccdef7"/>
+				<text><![CDATA[serial]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="3" width="100" height="20" uuid="0c33631b-392f-452e-a37d-644c448da856"/>
+				<text><![CDATA[passagem]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="415" y="9" width="100" height="20" uuid="cf49e1a2-66c3-4020-bfd5-6b8a6bf14db0"/>
+				<textFieldExpression><![CDATA[$F{serial}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="9" width="100" height="20" uuid="715aec4b-1e86-4ddb-8590-ff00ec96d21d"/>
+				<textFieldExpression><![CDATA[$F{passagem}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

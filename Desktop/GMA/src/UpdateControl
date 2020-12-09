@@ -1,0 +1,25 @@
+em 24/11/2014:
+Inicio das alterações em iniTable da Moagem, com inserção de MyTableColor, ficando pendente na linha 613 de MoagemForm corrigir table head e colorir table
+Lembrente: para colorir é necessario correr linha e colunas colorindo cada cell por vez. em MainGui de MyDesp fiz essa implementação. Caso eu não lembre.
+
+em 26/11/2014:
+É necessario diferenciar o ID do programa do ID da sessão em SessaoControl, pois quando chamamos servercallback estamos enviando a solicitação duas vezes ao cliente.
+
+Em 27/11/2014:
+Corrigido update da tadela apos inserir novo pedido em Expedição e Moagem Form.
+
+Em 27/11/2014:
+São gerados apenas um pid por execução, utilizado por todo o programa nas solicitações
+Feito ajustes em novo pedido, atendimento, cancelamento da expedição e moagem. feito ajustes no PedidoService e SessaoControl.
+
+Em 28/11/2014:
+Criado um modo Modelo para atender as modificações das tabelas PedidoTableModel, alterado as regras de autenticação e regras de cancelamento de pedidos.
+Obs.: Necessario fazer update de produtos no combo da taleba de pedidos.
+
+Em 07/12/2014:
+Modificado start dos Forms. necessario destruir todos os forms se for chamado a routina de desconexão.( isConnected )
+
+Incluir campo de expedido no pedido e alterar campo de quant. para solicitado.
+Campo expedido é alterado durante a finalização do pedido.
+
+Somente moleiro pode cancelar pedido com status "Disponivel".
