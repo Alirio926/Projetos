@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+	"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="layout.tiles" template="/WEB-INF/views/layout/baseLayout.jsp">
+		<put-attribute name="title" value=""></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/layout/header.jsp"></put-attribute>
+		<put-attribute name="body" value=""></put-attribute>
+		<put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp"></put-attribute>
+	</definition>	
+		 
+	<!-- ** Login ** -->
+	<definition name="home.login.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="Firmware: Login"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/home/login.jsp"></put-attribute>
+	</definition>
+	
+	<!-- ** Access Denied ** -->
+	<definition name="home.denied.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="Firmware: Login"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/home/denied.jsp"></put-attribute>
+	</definition>
+	
+	<!-- ** Registration ** -->
+	<definition name="home.registration.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="Firmware: Login"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/home/registration.jsp"></put-attribute>
+	</definition>
+	
+	<!-- ** Home ** -->
+	<definition name="home.bemvindo.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="Firmware:: Bem-vindo"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/home/bemVindo.jsp"></put-attribute>
+	</definition>
+	
+	<!-- ** Cliente adicionar ** -->
+    <definition name="cliente.adicionar.tiles" extends="layout.tiles">
+    	<put-attribute name="title" value="Adicionar Cliente"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/clientes/adicionar.jsp"/>
+    </definition>
+    <!-- ** Cliente listar ** -->
+    <definition name="cliente.listar.tiles" extends="layout.tiles">
+    	<put-attribute name="title" value="Listar Clientes"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/clientes/listar.jsp"/>
+    </definition>
+    
+     <!-- ** Licenças Adicionar ** -->
+    <definition name="licenca.adicionar.tiles" extends="layout.tiles">
+    	<put-attribute name="title" value="Nova Licença"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/licencas/adicionar.jsp"/>
+    </definition>
+    
+    <!-- ** Licenças listar ** -->
+    <definition name="licenca.listar.tiles" extends="layout.tiles">
+    	<put-attribute name="title" value="Listar Licenças"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/licencas/listar.jsp"/>
+    </definition>
+    
+    <!-- ** Licenças listar ** -->
+    <definition name="licenca.listarAll.tiles" extends="layout.tiles">
+    	<put-attribute name="title" value="Listar Licenças"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/licencas/listarAll.jsp"/>
+    </definition>
+    
+    <!-- ** Licenças listar ** -->
+    <definition name="licenca.listarByCliente.tiles" extends="layout.tiles">
+    	<put-attribute name="title" value="Listar Licenças"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/licencas/listarByCliente.jsp"/>
+    </definition>
+    
+    <!-- ** Pedidos listar ** -->
+    <definition name="pedido.listar.tiles" extends="layout.tiles">
+    	<put-attribute name="title" value="Listar Pedidos"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/pedidos/listar.jsp"/>
+    </definition>
+    
+    <!-- ** Pedidos listar Todos ** -->
+    <definition name="pedido.listarAll.tiles" extends="layout.tiles">
+    	<put-attribute name="title" value="Listar Pedidos"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/pedidos/listarAll.jsp"/>
+    </definition>
+    <!-- ** Pedidos listar By Cliente ** -->
+    <definition name="pedido.listarByCliente.tiles" extends="layout.tiles">
+    	<put-attribute name="title" value="Listar Pedidos"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/pedidos/listarByCliente.jsp"/>
+    </definition>
+    
+    <!-- ** Pedidos listar By Month ** -->
+    <definition name="pedido.listarByMonth.tiles" extends="layout.tiles">
+    	<put-attribute name="title" value="Listar Pedidos"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/pedidos/listarByMonth.jsp"/>
+    </definition>
+    
+    <!-- ** Posts Index ** -->
+    <definition name="blog.posts.tiles" extends="layout.tiles">
+    	<put-attribute name="title" value="Blog Squallsoft"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/blog/posts.jsp"/>
+    </definition>
+    
+</tiles-definitions>

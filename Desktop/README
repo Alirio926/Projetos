@@ -1,6 +1,10 @@
 # Projetos
  Esse Git contém alguns dos projetos que fiz.
  
+ #Desktop/JTAG
+ Programa Desktop utilizado por terceiros para fazer gravações em CPLD de forma controlado por mim.
+ Com essa interface grafica, o cliente pode selecionar o mapper que deseja gravar na placa, fazer o processo de gravação sem ter o acesso direto com o código que será gravado no chip, dessa forma posso manter o controle de quantas unidades foram gravadas e continuar sendo o único detentor do código.
+
  #Desktop/Estoque
  Programa Desktop para controle de Cilindros de passagem do Moinho.
  Faz o controle de cilindros, disponiveis, instalados e enviados para manutenção. Tive a ideia de construir esse programa para melhorar o controle do fluxo.
@@ -18,3 +22,5 @@
  Interface Grafica Moagem    - Recebe e executa o pedido de produção, devolvendo o pedido a Expedição
  Interface Grafica Comercial - Gera relatorios com tempos de carregamento
  Obs.: Todas as Interfaces podem gerar relatório.
+
+

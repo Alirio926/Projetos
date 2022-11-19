@@ -1,0 +1,14 @@
+#Configuração Usuário e Senha:
+#https://nullbeans.com/how-to-encrypt-decrypt-files-byte-arrays-in-java-using-aes-gcm/
+#Fri Oct 01 22:12:28 BRT 2021
+NOVO_PEDIDO=/pedido/novo/%d/%s/%d
+NOVO_TASK=/pedido/newTask/%d
+APP_HISTORY=/myapp/history
+APP_VERSION=/myapp/version
+CLOSE_PEDIDO=/pedido/close/%d/%d
+FIRMWARE_LIST=/mapper/listarMappers
+NOVO_DOWNLOAD=/myapp/download/%s
+SERVIDOR_IP=http\://squallsoft.ddns.net
+SERVIDOR_PORT=80
+UPDATE_TASK=/pedido/updateTask
+BOARD_LIST_BY_MAPPER_ID=/mapper/findBoardsByMapper/%d

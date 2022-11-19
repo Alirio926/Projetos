@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>BurnLog List Test Thymeleaf Web Application</title>
+</head>
+<body>
+<!-- <label th:text="'Foram feitos ' + ${qtdPedidos} + ' pedidos, gravados ' + ${qtdBurns} + ' e cancelado(s) ' + ${qtdCancel} +' com ' + ${qtdSuccess} + ' bem sucedidas e ' + ${qtdFail} + ' mal sucedidas.'"></label>  -->
+<!-- <label th:text="'Valor pendente R$ ' + ${total}"></label> -->
+<tbody>
+    <tr th:each="line: ${lista}">
+        <td th:text="${line}" />
+        <br><br>
+    </tr>
+</tbody>
+</body>
+</html>

@@ -1,19 +1,23 @@
 # Projetos
  Esse Git contem alguns dos projetos web que fiz.
- 
+  
+ #WEB/Jtag-Web
+ Front-end - API REST
+ Projeto foi elaborado para tornar possível a disponibilidade de gravação 
+    de chip mapper por terceiros sem a necessidade de expor o código dos chips.
+ Feito em linguagem Java, utilizando Framework SpringBoot, bootstrap, javascript, MySql.
+
  #WEB/Blog/React
  Front-end
  Blog feito com React, bootstrap, html, Node e JavaScript.
- 
+
  #WEB/Blog/Spring
  Back-end
  API Rest utilizada no Blog, feito com Java, Spring MVC e MySql.
  
-----------------------------------------------------------------
-
-#WEB/ClinVet
-Front-end / Back-end
-Projeto feito durante o curso de spring mvc no treinaweb.com
-Clinica veterinaria.
-Java, Spring MVC, bootstrap, Tiles, javascript e MySql
+ #WEB/ClinVet
+ Front-end / Back-end
+ Projeto feito durante o curso de spring mvc no treinaweb.com
+ Clinica veterinaria.
+ Java, Spring MVC, bootstrap, Tiles, javascript e MySql
 

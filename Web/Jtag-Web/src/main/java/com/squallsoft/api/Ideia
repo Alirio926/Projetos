@@ -1,0 +1,22 @@
+
+https://pt.stackoverflow.com/questions/234755/diferen%C3%A7as-onetomany-manytomany-manytoone-onetoone
+
+Pedido contem uma licença
+
+-> cliente fa um pedido
+Somente gera novo pedido, se não ouver pedidos pendente gravção.
+Necessario alterar no FirmwarApp para quando cancelar pedido, atualizar
+pedido no servidor.
+
+-> Cliente envia codigo da linceça pedindo um Pedido.
+
+
+-> como atualizar uma licença
+Obter todos os pedidos atrelados a licença atual.
+Verificar quantos processos de gravação deram certo, em cada pedido.
+Atualiza no pedido quantidade atual de gavações.
+Atualiza na licença numero de gravações disponíveis.
+
+
+https://codepen.io/n3k1t/pen/OJMGgyq
+https://www.quackit.com/bootstrap/bootstrap_3/tutorial/bootstrap_collapse.cfm
